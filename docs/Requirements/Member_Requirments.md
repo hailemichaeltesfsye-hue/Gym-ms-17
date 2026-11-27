@@ -153,3 +153,35 @@ The system shall store the following payment details:
 - Members shall only be allowed to view their own payment history.
 - The system shall protect member information from unauthorized access.
 - Only authorized users shall be allowed to modify membership and payment records.
+
+## 6. Non-Functional Requirements
+
+### 6.1 Performance Requirements
+
+- NFR-M01: The system shall display member information within 3 seconds under normal operating conditions.
+- NFR-M02: The system shall process member login requests within 3 seconds.
+- NFR-M03: The system shall display membership plans and payment history without unnecessary delays.
+
+### 6.2 Security Requirements
+
+- NFR-M04: The system shall protect member accounts through secure authentication.
+- NFR-M05: The system shall store passwords using secure password hashing.
+- NFR-M06: The system shall prevent members from accessing other members' personal and payment information.
+- NFR-M07: The system shall protect member information against unauthorized access.
+
+### 6.3 Usability Requirements
+
+- NFR-M08: The system shall provide a simple and user-friendly interface.
+- NFR-M09: The system shall provide clear messages for successful and unsuccessful operations.
+- NFR-M10: The system shall allow members to navigate between available functions easily.
+
+### 6.4 Reliability and Availability Requirements
+
+- NFR-M11: The system shall maintain accurate member, membership, and payment records.
+- NFR-M12: The system shall prevent data loss during normal system operations.
+- NFR-M13: The system shall be available to members during the gym's operating hours, except during scheduled maintenance.
+
+### 6.5 Compatibility Requirements
+
+- NFR-M14: The system shall work with commonly used modern web browsers.
+- NFR-M15: The system shall provide an interface that can be accessed on desktop computers, tablets, and smartphones.
