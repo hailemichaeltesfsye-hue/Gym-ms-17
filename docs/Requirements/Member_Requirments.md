@@ -395,3 +395,55 @@ The system shall store the following payment details:
 **Postconditions:**
 - The member's valid updated information is saved.
 - The updated information is available in the member's profile.
+
+## 8. Business Rules and Traceability Matrix
+
+### 8.1 Business Rules
+
+The following business rules define the conditions and policies that the Gym Membership Management System shall follow:
+
+- BR-M01: Each gym member shall have a unique Member ID.
+- BR-M02: Each member shall register using a unique username and email address.
+- BR-M03: A member must provide all required registration information before an account can be created.
+- BR-M04: Only registered members with valid login credentials shall access member-only functions.
+- BR-M05: Members shall only be allowed to view and update their own permitted personal information.
+- BR-M06: Each member shall have access only to their own membership information.
+- BR-M07: Membership status shall be determined according to the membership expiration date and applicable membership conditions.
+- BR-M08: Membership renewal shall be completed only after successful payment confirmation.
+- BR-M09: Each payment record shall be associated with a valid member.
+- BR-M10: Members shall only be allowed to view their own payment history.
+- BR-M11: Payment records shall be maintained accurately and shall not be modified by unauthorized members.
+- BR-M12: The system shall display only membership plans that are available for selection.
+
+### 8.2 Requirements Traceability Matrix
+
+The traceability matrix connects each functional requirement to its corresponding detailed use case.
+
+| Requirement ID | Functional Requirement | Use Case ID |
+|---|---|---|
+| FR-M01 | Member Registration | UC-M01 |
+| FR-M02 | Member Login and Logout | UC-M02, UC-M03 |
+| FR-M03 | View Membership Plans | UC-M04 |
+| FR-M04 | View Membership Status | UC-M05 |
+| FR-M05 | Renew Membership | UC-M06 |
+| FR-M06 | View Payment History | UC-M07 |
+| FR-M07 | Update Personal Information | UC-M08 |
+
+### 8.3 Business Rules Traceability
+
+The following table connects business rules to the requirements they support.
+
+| Business Rule ID | Related Requirement ID |
+|---|---|
+| BR-M01 | FR-M01 |
+| BR-M02 | FR-M01 |
+| BR-M03 | FR-M01 |
+| BR-M04 | FR-M02 |
+| BR-M05 | FR-M07 |
+| BR-M06 | FR-M04 |
+| BR-M07 | FR-M04 |
+| BR-M08 | FR-M05 |
+| BR-M09 | FR-M05, FR-M06 |
+| BR-M10 | FR-M06 |
+| BR-M11 | FR-M06 |
+| BR-M12 | FR-M03 |
