@@ -22,11 +22,12 @@ view membership plans, and check payment history.
 
 1. Register Account
 2. Login
-3. View Membership Plans
-4. View Membership Status
-5. Renew Membership
-6. View Payment History
-7. Update Profile
+3. Logout
+4. View Membership Plans
+5. View Membership Status
+6. Renew Membership
+7. View Payment History
+8. Update Profile
 
 ## 4. Requirement Priorities and Acceptance Criteria
 
@@ -145,6 +146,7 @@ The system shall store the following payment details:
 - Payment amounts shall be greater than zero.
 - Each payment shall be associated with a valid member.
 - Passwords shall be stored securely and shall not be stored as plain text.
+- Email addresses shall be unique for each member account.
 
 ### 5.5 Data Access and Security
 
@@ -298,7 +300,7 @@ The system shall store the following payment details:
 
 **Preconditions:**
 - The member is logged in.
-- The member has membership information recorded in the system.
+- The system is available.
 
 **Main Flow:**
 1. The member opens the membership status page.
@@ -409,7 +411,7 @@ The following business rules define the conditions and policies that the Gym Mem
 - BR-M05: Members shall only be allowed to view and update their own permitted personal information.
 - BR-M06: Each member shall have access only to their own membership information.
 - BR-M07: Membership status shall be determined according to the membership expiration date and applicable membership conditions.
-- BR-M08: Membership renewal shall be completed only after successful payment confirmation.
+- - BR-M08: The system shall update a member's membership expiration date only after successful payment confirmation for the renewal.
 - BR-M09: Each payment record shall be associated with a valid member.
 - BR-M10: Members shall only be allowed to view their own payment history.
 - BR-M11: Payment records shall be maintained accurately and shall not be modified by unauthorized members.
