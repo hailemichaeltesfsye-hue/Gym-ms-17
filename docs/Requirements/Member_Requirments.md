@@ -185,3 +185,213 @@ The system shall store the following payment details:
 
 - NFR-M14: The system shall work with commonly used modern web browsers.
 - NFR-M15: The system shall provide an interface that can be accessed on desktop computers, tablets, and smartphones.
+
+## 7. Detailed Use Case Specifications
+
+### 7.1 Use Case: Register Account
+
+**Use Case ID:** UC-M01  
+**Primary Actor:** Gym Member  
+**Description:** Allows a new gym member to create an account in the system.
+
+**Preconditions:**
+- The member does not already have an account.
+- The system is available.
+
+**Main Flow:**
+1. The member opens the registration page.
+2. The system displays the registration form.
+3. The member enters the required personal information.
+4. The member submits the registration form.
+5. The system validates the submitted information.
+6. The system checks whether the username and email are already registered.
+7. The system creates the member account.
+8. The system displays a successful registration message.
+
+**Alternative Flows:**
+- If required information is missing, the system asks the member to complete it.
+- If the submitted information is invalid, the system displays an appropriate error message.
+- If the username or email already exists, the system asks the member to use different information.
+
+**Postconditions:**
+- A new member account is created successfully.
+- The member's information is stored in the system.
+
+### 7.2 Use Case: Login
+
+**Use Case ID:** UC-M02  
+**Primary Actor:** Gym Member  
+**Description:** Allows registered members to access their accounts.
+
+**Preconditions:**
+- The member has a registered account.
+- The system is available.
+
+**Main Flow:**
+1. The member opens the login page.
+2. The system displays the login form.
+3. The member enters their username and password.
+4. The member submits the login form.
+5. The system verifies the login credentials.
+6. The system grants access to the member's account.
+7. The system displays the member dashboard.
+
+**Alternative Flows:**
+- If the username or password is incorrect, the system displays an error message.
+- If required login information is missing, the system asks the member to enter it.
+
+**Postconditions:**
+- The member is successfully logged in.
+- The member can access authorized account functions.
+
+### 7.3 Use Case: Logout
+
+**Use Case ID:** UC-M03  
+**Primary Actor:** Gym Member  
+**Description:** Allows a logged-in member to securely end their session.
+
+**Preconditions:**
+- The member is logged in.
+
+**Main Flow:**
+1. The member selects the logout option.
+2. The system ends the member's session.
+3. The system redirects the member to the login page.
+4. The system displays a logout confirmation message.
+
+**Alternative Flows:**
+- If the session has already expired, the system redirects the member to the login page.
+
+**Postconditions:**
+- The member's session is ended.
+- The member must log in again to access protected functions.
+
+### 7.4 Use Case: View Membership Plans
+
+**Use Case ID:** UC-M04  
+**Primary Actor:** Gym Member  
+**Description:** Allows members to view available gym membership plans.
+
+**Preconditions:**
+- The system is available.
+- Membership plans have been added to the system.
+
+**Main Flow:**
+1. The member opens the membership plans page.
+2. The system retrieves available membership plans.
+3. The system displays the available plans.
+4. The member selects a plan to view its details.
+5. The system displays the selected plan's name, duration, and price.
+
+**Alternative Flows:**
+- If no membership plans are available, the system displays an appropriate message.
+
+**Postconditions:**
+- The member has viewed the available membership plans.
+- No membership information is changed.
+
+### 7.5 Use Case: View Membership Status
+
+**Use Case ID:** UC-M05  
+**Primary Actor:** Gym Member  
+**Description:** Allows members to check their current membership information and status.
+
+**Preconditions:**
+- The member is logged in.
+- The member has membership information recorded in the system.
+
+**Main Flow:**
+1. The member opens the membership status page.
+2. The system retrieves the member's membership information.
+3. The system displays the membership plan.
+4. The system displays the membership start date and expiration date.
+5. The system displays the current membership status.
+
+**Alternative Flows:**
+- If the member has no membership record, the system displays a message indicating that no membership is available.
+
+**Postconditions:**
+- The member has viewed their membership information.
+- No membership information is changed.
+
+### 7.6 Use Case: Renew Membership
+
+**Use Case ID:** UC-M06  
+**Primary Actor:** Gym Member  
+**Description:** Allows members to request renewal of their gym membership.
+
+**Preconditions:**
+- The member is logged in.
+- The member has an existing membership record.
+- Renewal options are available.
+
+**Main Flow:**
+1. The member opens the membership renewal page.
+2. The system displays available renewal options.
+3. The member selects a renewal option.
+4. The system displays the renewal details and required payment amount.
+5. The member confirms the renewal request.
+6. The system processes or records the payment request.
+7. The payment is confirmed successfully.
+8. The system updates the membership expiration date.
+9. The system displays a renewal confirmation message.
+
+**Alternative Flows:**
+- If no renewal options are available, the system displays an appropriate message.
+- If payment fails, the system displays a payment failure message.
+- If payment is pending, the system keeps the renewal request pending until confirmation.
+
+**Postconditions:**
+- After successful payment confirmation, the membership expiration date is updated.
+- The renewal payment record is stored in the system.
+
+### 7.7 Use Case: View Payment History
+
+**Use Case ID:** UC-M07  
+**Primary Actor:** Gym Member  
+**Description:** Allows members to view their previous payment records.
+
+**Preconditions:**
+- The member is logged in.
+
+**Main Flow:**
+1. The member opens the payment history page.
+2. The system retrieves the member's payment records.
+3. The system displays the available payment records.
+4. Each record displays the payment date, amount, payment method, and payment status.
+5. The member reviews their payment history.
+
+**Alternative Flows:**
+- If no payment records are available, the system displays a message indicating that no payment history exists.
+
+**Postconditions:**
+- The member has viewed their payment history.
+- Payment records remain unchanged.
+
+### 7.8 Use Case: Update Profile
+
+**Use Case ID:** UC-M08  
+**Primary Actor:** Gym Member  
+**Description:** Allows members to update their personal information.
+
+**Preconditions:**
+- The member is logged in.
+- The member has an existing account.
+
+**Main Flow:**
+1. The member opens the profile page.
+2. The system displays the member's current personal information.
+3. The member selects the information they want to update.
+4. The member enters the new information.
+5. The member submits the changes.
+6. The system validates the updated information.
+7. The system saves the valid changes.
+8. The system displays a successful update message.
+
+**Alternative Flows:**
+- If the submitted information is invalid, the system displays an error message.
+- If required information is missing, the system asks the member to complete it.
+
+**Postconditions:**
+- The member's valid updated information is saved.
+- The updated information is available in the member's profile.
